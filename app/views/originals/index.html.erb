@@ -1,0 +1,25 @@
+<h1>Listing originals</h1>
+
+<table>
+  <tr>
+    <th>Path</th>
+    <th>Base</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @originals.each do |original| %>
+  <tr>
+    <td><%= original.path %></td>
+    <td><%= original.base %></td>
+    <td><%= link_to 'Show', original %></td>
+    <td><%= link_to 'Edit', edit_original_path(original) %></td>
+    <td><%= link_to 'Destroy', original, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Original', new_original_path %>

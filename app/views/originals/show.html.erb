@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Path:</b>
+  <%= @original.path %>
+</p>
+
+<p>
+  <b>Base:</b>
+  <%= @original.base %>
+</p>
+
+
+<%= link_to 'Edit', edit_original_path(@original) %> |
+<%= link_to 'Back', originals_path %>

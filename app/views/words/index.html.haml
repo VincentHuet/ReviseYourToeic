@@ -1,0 +1,31 @@
+- model_class = Word.new.class
+.page-header
+  %h1= t '.title', :default => model_class.model_name.human.pluralize
+%table.table.table-striped
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:english)
+      %th= model_class.human_attribute_name(:french)
+      / %th= model_class.human_attribute_name(:path)
+      / %th= model_class.human_attribute_name(:original_id)
+      / %th= model_class.human_attribute_name(:created_at)
+      %th= t '.actions', :default => t("helpers.actions")
+  %tbody
+    - @words.each do |word|
+      %tr
+        %td= link_to word.id, word_path(word)
+        %td= word.english
+        %td= word.french
+        / %td= word.original.path
+        / %td= word.original_id
+        / %td= word.created_at
+        %td
+          = link_to t('.edit', :default => t("helpers.links.edit")), |
+            edit_word_path(word), :class => 'btn btn-mini'           |
+          -#
+          = link_to t('.destroy', :default => t("helpers.links.destroy")),                                  |
+            word_path(word),                                                                                |
+            :method => :delete,                                                                             |
+            :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), |
+            :class => 'btn btn-mini btn-danger'                                                             |

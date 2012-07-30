@@ -1,0 +1,38 @@
+<%= form_for @word, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :english, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :english, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :french, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :french, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :locale, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :locale, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :lvl1, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :lvl1, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :lvl2, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :lvl2, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                words_path, :class => 'btn' %>
+  </div>
+<% end %>

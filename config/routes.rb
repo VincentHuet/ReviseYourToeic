@@ -1,8 +1,11 @@
 ReviseYourToeic::Application.routes.draw do
 
-  resources :locales do
-    resources :words
-  end
+  resources :originals
+
+  resources :locales
+
+  resources :words
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

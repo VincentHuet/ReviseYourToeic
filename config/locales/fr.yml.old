@@ -1,0 +1,22 @@
+fr:
+  first_year_first_voc:
+    in_business:
+      business: "les affaires"
+      a_bussiness: "une affaire"
+      a_firm: "une entreprise"
+      a_company: "une entreprise"
+      a_corporation: "une entreprise"
+      a_manufacturer: "un fabriquant"
+      a_subcontractor: "un sous-traitant"
+      a_consulting_firm: "une société de conseil"
+      a_factory: "une usine"
+      a_plant: "une usine"
+      a_production_facility: "une usine"
+      a_warehouse: "un entrepôt"
+      an_assembly_line: "une chaîne de montage"
+      a_merger: "une fusion"
+      a_parent_company: "une société mère"
+      a_subsidiary: "une filiale"
+      the_head_office: "le siège sociale"
+      the_main_office: "le siège sociale"
+      headquarters:  "le siège sociale"

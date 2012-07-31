@@ -7,8 +7,9 @@ class HomeController < ApplicationController
 
     @vocabulary = YmlLoader.load_yaml("fr.yml")
 
-    @liste = TranslationsManager.hash_to_export(@vocabulary, "", "&nbsp;", "<br>")
+    @liste = TranslationsManager.hash_to_export(@vocabulary, "", "-", "<br>")
 
+    @liste_without_key = @liste.sub(/[-]{8}.*<br>$/,"")
 
 
     hash_path = ""

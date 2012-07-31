@@ -21,12 +21,10 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand{:href => "#"} ReviseYourToeic
+          %a.brand{:href => root_path} ReviseYourToeic
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Link1", "/path1"
-              %li= link_to "Link2", "/path2"
-              %li= link_to "Link3", "/path3"
+              %li= link_to t("words"), words_path
           / /.nav-collapse
     .container
       .content
@@ -35,12 +33,13 @@
             = yield
           .span3
             .well.sidebar-nav
-              %h3 Sidebar
+              %h3 Catégorie
               %ul.nav.nav-list
-                %li.nav-header Sidebar
-                %li= link_to "Link1", "/path1"
+                %li.nav-header= t("full_content")
+                %li= link_to t("words"), words_path
                 %li= link_to "Link2", "/path2"
                 %li= link_to "Link3", "/path3"
+              = raw(@liste_without_key)
             / /.well
           / /span
         / /row

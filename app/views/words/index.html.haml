@@ -15,8 +15,8 @@
     - @words.each do |word|
       %tr
         %td= link_to word.id, word_path(word)
-        %td= word.english
-        %td= word.french
+        %td= word.english.humanize
+        %td= word.french.humanize
         / %td= word.original.path
         / %td= word.original_id
         / %td= word.created_at

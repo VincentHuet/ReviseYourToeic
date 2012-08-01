@@ -9,7 +9,7 @@ class HomeController < ApplicationController
 
     @liste = TranslationsManager.hash_to_export(@vocabulary, "", "-", "<br>")
 
-    @liste_without_key = @liste.sub(/[-]{8}.*<br>$/,"")
+    @liste_without_key = @liste.gsub(/[-]{8}.+?<br>/, "")
 
 
     hash_path = ""

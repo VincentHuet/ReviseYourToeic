@@ -23,5 +23,24 @@ class TranslationsManager
     end
   end
 
+  def self.simplifie(locale_translation_hash)
+    @returned_hash = locale_translation_hash
+
+    locale_translation_hash.each_key do |locale_sub_level_key|
+
+      if locale_translation_hash[locale_sub_level_key].class == Hash
+        return_flag = self.simplifie(locale_translation_hash[locale_sub_level_key])
+
+        if return_flag.class != Hash
+          locale_translation_hash[locale_sub_level_key] = {}
+        end
+
+      else
+        return_flag = 1
+
+        return_flag
+      end
+    end
+  end
 
 end

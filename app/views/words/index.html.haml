@@ -1,6 +1,8 @@
 - model_class = Word.new.class
 .page-header
   %h1= t '.title', :default => model_class.model_name.human.pluralize
+
+= @expression
 %table.table.table-striped
   %thead
     %tr

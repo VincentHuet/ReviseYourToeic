@@ -1,6 +1,12 @@
 .page-header
   %h1 Hello world
 
-/= @count
 
-/ = raw(@printed_hash)
+=link_to t('lol'), words_path, :expression => "lol"
+= @count
+%br
+= raw(@liste_without_key)
+
+= @vocabulary
+
+

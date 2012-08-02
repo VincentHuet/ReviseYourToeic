@@ -10,7 +10,7 @@ ReviseYourToeic::Application.routes.draw do
   # first created -> highest priority.
 
   # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
+  match 'filtered_words/:expression/index_filtered' => 'filtered_words#index_filtered', :as => :index_filtered
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:

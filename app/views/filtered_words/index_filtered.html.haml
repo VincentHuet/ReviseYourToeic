@@ -1,0 +1,21 @@
+.header
+  %h1
+    You asked for theme called : "
+    = t("#{@expression}")
+    \"
+  %h2
+    It contain
+    = @counter
+    words on
+    = @originals.count
+    which are available
+%table
+  %tr
+    %th Path
+    %th Base
+    %th
+  - @originals_filtered.each do |original|
+    %tr
+      %td= Word.where(:original_id => original.id).first.french
+      %td= t ("#{original.base}")
+%br/

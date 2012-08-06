@@ -16,4 +16,6 @@ class Word < ActiveRecord::Base
   attr_accessible :french
 
   belongs_to :original
+
+  delegate :path, :to => :original
 end

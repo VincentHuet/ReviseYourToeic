@@ -3,17 +3,8 @@ class WordsController < ApplicationController
   # GET /words
   # GET /words.json
   def index
-    @expression = params[:expression]
-
-    puts "--------------------  ici ------------------".inspect
-
-    puts params.inspect
-
-    puts "--------------------  ici ------------------".inspect
-
     @words = Word.all
-
-    #@vocabulary = YmlLoader.load_yaml_vocabulary_shit
+    @vocabulary = YmlLoader.load_yaml_vocabulary_shit
 
     respond_to do |format|
       format.html # index.html.erb

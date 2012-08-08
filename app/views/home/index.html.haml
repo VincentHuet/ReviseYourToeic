@@ -2,20 +2,12 @@
   %h1 Hello world
 
 
-=link_to t('in_business'), index_filtered_path(:expression => "in_business")
+- toto = link_to t('in_business'), index_filtered_path(:expression => "in_business")
 
-%br
-= raw(@liste_without_key)
-- @liste_without_key = @liste_without_key.gsub(/[:]{1}/, "<ul>")
-- @liste_without_key = @liste_without_key.gsub(/[-]{6}/, "<li>")
-- @liste_without_key = @liste_without_key.gsub(/[-]{4}/, "</ul></ul><li>")
-- @liste_without_key = @liste_without_key.gsub(/[-]{2}/, "</ul></ul><li>")
-%br
+= toto
 
 %ul
   = raw(@liste_without_key_2)
-/ = @vocabulary
 
-%br
 %br
 

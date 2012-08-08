@@ -9,6 +9,7 @@
         /[if lt IE 9]
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
         = stylesheet_link_tag "application", :media => "all"
+        = stylesheet_link_tag "style_for_flip", :media => "all"
         %link{:href => "images/favicon.ico", :rel => "shortcut icon"}
           %link{:href => "images/apple-touch-icon.png", :rel => "apple-touch-icon"}
             %link{:href => "images/apple-touch-icon-72x72.png", :rel => "apple-touch-icon", :sizes => "72x72"}
@@ -30,22 +31,22 @@
       .content
         .row
           .span9
-            = yield
+            .hero-unit
+              = yield
           .span3
             .well.sidebar-nav
               %h3 Catégorie
               %ul.nav.nav-list
-                %li.nav-header= t("full_content")
-                %li= link_to t("words"), words_path
-                %li= link_to "Link2", "/path2"
-                %li= link_to "Link3", "/path3"
+                = raw(@liste_without_key_2)
+
               / = raw(@liste_without_key)
             / /.well
           / /span
         / /row
       / /content
       %footer
-        %p © Company 2012
+        .pull-right
+          %p © Vincent-Huet-Initiative&Imagination 2012
     / /container
     /
       Javascripts

@@ -1,21 +1,24 @@
 .header
-  %h1
+  %h2
     You asked for theme called : "
     = t("#{@expression}")
     \"
-  %h2
+  %h3
+    Thanks to :
+    = @expression
+  %h3
     It contain
     = @counter
     words on
     = @originals.count
     which are available
-%table
-  %tr
-    %th Path
-    %th Base
-    %th
+.span3.offset2
   - @originals_filtered.each do |original|
-    %tr
-      %td= Word.where(:original_id => original.id).first.french
-      %td= t ("#{original.base}")
-%br/
+    .click.panel
+      .front
+        %h3
+          = Word.where(:original_id => original.id).first.french
+      .back
+        %h3
+          = t ("#{original.base}")
+    %br/

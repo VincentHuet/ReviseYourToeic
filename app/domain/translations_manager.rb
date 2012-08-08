@@ -27,13 +27,18 @@ class TranslationsManager
     return_phrase = ""
     locale_translation_hash.each_key do |locale_sub_level_key|
       if locale_translation_hash[locale_sub_level_key].class == Hash
-        ancestor = "#{ancestor}.#{locale_sub_level_key}"
-        return_phrase << "<#{space_type}>#{locale_sub_level_key} : #{ancestor}</#{space_type}><ul>#{return_type}"
-        return_phrase << self.export_liste(locale_translation_hash[locale_sub_level_key], ancestor, space_type, return_type)
+        ancestor_custom = "#{ancestor}.#{locale_sub_level_key}"
+        ancestor_custom = ancestor_custom.gsub("\.", "+")
+        link = "/filtered_words/#{ancestor_custom}/index_filtered"
+        return_phrase << "<#{space_type}><a href='#{link}'>#{locale_sub_level_key}</a></#{space_type}><ul>#{return_type}"
+        return_phrase << self.export_liste(locale_translation_hash[locale_sub_level_key], ancestor_custom, space_type, return_type)
         return_phrase << "</ul>"
       end
     end
     return_phrase.to_s
   end
+
+
+
 
 end

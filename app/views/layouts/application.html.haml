@@ -22,7 +22,7 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand{:href => root_path} ReviseYourToeic
+          %a.brand{:href => root_path} Revise my English Test
           .container.nav-collapse
             %ul.nav
               %li= link_to t("words"), words_path
@@ -45,8 +45,19 @@
         / /row
       / /content
       %footer
-        .pull-right
-          %p © Vincent-Huet-Initiative&Imagination 2012
+        .pagination-centered
+          .row
+            .span9
+              .home-photo= link_to image_tag("UK_flag_old.png"), "https://twitter.com/huet_vincent"
+              .home-photo= link_to image_tag("UK_flag_old.png"), "https://twitter.com/huet_vincent"
+              .home-photo= link_to image_tag("UK_flag_old.png"), "https://twitter.com/huet_vincent"
+              .home-photo= link_to image_tag("UK_flag_old.png"), "https://twitter.com/huet_vincent"
+          %br
+          .row
+            .span9
+              %strong
+                %a{:href => "https://twitter.com/huet_vincent"} © Vincent Huet
+              Initiative & Imagination 2012
     / /container
     /
       Javascripts

@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/VincentHuet/gem_tolk_djengo.git
-  revision: b4c4354fc9dcfe7f0b060742998d48cc6986b5eb
+  revision: ddc77e58c3ecf55018dcac58aab168752f234273
   specs:
     tolk_engine (0.0.1)
       cancan

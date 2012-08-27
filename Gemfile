@@ -5,8 +5,8 @@ gem 'rails', '3.2.5'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
+gem 'pg'
+gem 'tolk_engine', :git => 'https://github.com/VincentHuet/gem_tolk_djengo.git'
 
 # Gems used only for assets and not required
 # in production environments by default.

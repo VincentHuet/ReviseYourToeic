@@ -1,11 +1,13 @@
 
 .row
   .span1
-    .home-photo= link_to image_tag("UK_flag_old.png"), "https://twitter.com/huet_vincent"
+    .photo#home-photo= link_to image_tag("UK_flag_old.png"), "https://twitter.com/huet_vincent"
   .span5.offset1
     %h2 Bienvenue sur "Revise my English Test"
     %h3 Welcome on "Revise my English Test"
 %br
+.row
+  = @locales
 .row
   .span8
     .row

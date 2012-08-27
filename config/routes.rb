@@ -1,5 +1,9 @@
 ReviseYourToeic::Application.routes.draw do
 
+  mount TolkEngine::Engine => '/tolk_engine', :as => 'tolk_engine'
+
+  devise_for :translators, :controllers => { :registrations => 'tolk_engine/custom_devise/registrations', :sessions => 'tolk_engine/custom_devise/sessions' }, :class_name => 'TolkEngine::Translator', :module => :devise
+
   resources :originals
 
   resources :locales
@@ -12,7 +16,7 @@ ReviseYourToeic::Application.routes.draw do
   # Sample of regular route:
   match 'filtered_words/:expression/index_filtered' => 'filtered_words#index_filtered', :as => :index_filtered
   # Keep in mind you can assign values other than :controller and :action
-
+  match 'about_me/index' => "about_me#index"
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
@@ -53,9 +57,13 @@ ReviseYourToeic::Application.routes.draw do
   #     resources :products
   #   end
 
+
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'home#index'
+  root :to => 'home#index'
+
+  # gem "tolk_engine", :path => "../engine/tolk_engine"
+
 
   # See how all your routes lay out with "rake routes"
 

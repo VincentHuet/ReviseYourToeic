@@ -1,8 +1,8 @@
 class RemoveUselessColumnsFromWords < ActiveRecord::Migration
   def up
-    remove_column :words, :locale, :string
-    remove_column :words, :lvl1, :string
-    remove_column :words, :lvl2, :string
+    remove_column :words, :locale
+    remove_column :words, :lvl1
+    remove_column :words, :lvl2
   end
 
   def down

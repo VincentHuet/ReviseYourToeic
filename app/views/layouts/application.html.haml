@@ -25,7 +25,18 @@
           %a.brand{:href => root_path} Revise my English Test
           .container.nav-collapse
             %ul.nav
-              %li= link_to t("words"), words_path
+              %li
+                = link_to words_path do
+                  .icon-th-list
+                  = t("words")
+              %li
+                = link_to about_me_index_path do
+                  .icon-user
+                  = t("about_me")
+              %li
+                = link_to tolk_engine_path do
+                  .icon-globe
+                  = t("internationalizer")
           / /.nav-collapse
     .container
       .content
@@ -48,10 +59,10 @@
         .pagination-centered
           .row
             .span9
-              .home-photo= link_to image_tag("UK_flag_old.png"), "https://twitter.com/huet_vincent"
-              .home-photo= link_to image_tag("UK_flag_old.png"), "https://twitter.com/huet_vincent"
-              .home-photo= link_to image_tag("UK_flag_old.png"), "https://twitter.com/huet_vincent"
-              .home-photo= link_to image_tag("UK_flag_old.png"), "https://twitter.com/huet_vincent"
+              = link_to image_tag("twitter.png"), "https://twitter.com/huet_vincent"
+              = link_to image_tag("facebook.png"), "https://twitter.com/vincent.alex.huet"
+              = link_to image_tag("google.png"), "v.huet@groupe-esigelec.fr"
+              = link_to image_tag("linkedin.png"), "https://linkedin.com/huet_vincent"
           %br
           .row
             .span9
